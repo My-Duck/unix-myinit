@@ -1,0 +1,38 @@
+First three tasks:
+ilia        2204    2198  0 11:14 ?        00:00:00 /bin/sleep 5
+ilia        2211    2177  0 11:14 pts/0    00:00:00 grep /bin/sleep 5
+ilia        2205    2198  0 11:14 ?        00:00:00 /bin/sleep 10
+ilia        2214    2177  0 11:14 pts/0    00:00:00 grep /bin/sleep 10
+kernoops     991       1  0 11:13 ?        00:00:00 /usr/sbin/kerneloops --test
+ilia        2203    2198  0 11:14 ?        00:00:00 /home/ilia/Desktop/test 1 2 3
+ilia        2216    2177  0 11:14 pts/0    00:00:00 grep test
+Three tasks after kill second task:
+ilia        2204    2198  0 11:14 ?        00:00:00 /bin/sleep 5
+ilia        2224    2177  0 11:14 pts/0    00:00:00 grep /bin/sleep 5
+ilia        2221    2198  0 11:14 ?        00:00:00 /bin/sleep 10
+ilia        2227    2177  0 11:14 pts/0    00:00:00 grep /bin/sleep 10
+kernoops     991       1  0 11:13 ?        00:00:00 /usr/sbin/kerneloops --test
+ilia        2203    2198  0 11:14 ?        00:00:00 /home/ilia/Desktop/test 1 2 3
+ilia        2230    2177  0 11:14 pts/0    00:00:00 grep test
+One task running:
+ilia        2263    2198  0 11:15 ?        00:00:00 /bin/sleep 3
+ilia        2265    2177  0 11:15 pts/0    00:00:00 grep /bin/sleep 3
+myinit stared
+task 0 started /home/ilia/Desktop/test with pid: 2203
+task 1 started /bin/sleep with pid: 2204
+task 2 started /bin/sleep with pid: 2205
+task 2 finished with status: 15
+task 2 started /bin/sleep with pid: 2221
+task 0 finished with status: 0
+task 0 started /home/ilia/Desktop/test with pid: 2234
+task 1 finished with status: 0
+task 1 started /bin/sleep with pid: 2259
+task 1 finished with status: 0
+task 1 started /bin/sleep with pid: 2260
+task 2 finished with status: 0
+task 2 started /bin/sleep with pid: 2261
+task 0 killed
+task 1 killed
+task 2 killed
+Handle SIGHUP. Restarting myinit
+task 0 started /bin/sleep with pid: 2263
